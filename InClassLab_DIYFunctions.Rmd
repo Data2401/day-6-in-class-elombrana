@@ -16,7 +16,10 @@ The questions from your notes today are below, please copy your answers them her
 1. Write your own function that takes the temperature in Fahrenheit as an argument and returns the Celcius equivalent. 
 
 ```{R}
-
+convert_temperature<- function(Fahrenheit){
+  Celcius<- (Fahrenheit-32)*5/9
+  Celcius
+}
 
 ```
 
@@ -24,7 +27,13 @@ The questions from your notes today are below, please copy your answers them her
 
 
 ```{r}
+convert_temp__and_distance<- function(Fahrenheit, Feet){
+  Celcius<- (Fahrenheit-32)*5/9
+  Meters<- Feet * 0.3048
+  c(Celcius, Meters)
+}
 
+convert_temp__and_distance(2,2)
 
 ```
 
@@ -32,7 +41,13 @@ The questions from your notes today are below, please copy your answers them her
 3. Write a function that prints out a statement of whether the number passed as an argument is positive, negative or 0. 
 
 ```{R}
-
+Positiive_or_Negative<- function(Input){
+  if (Input > 0)
+    print('The number is positive')
+  else
+    print('The number is negative')
+  
+}
 
 ```
 
@@ -40,7 +55,12 @@ The questions from your notes today are below, please copy your answers them her
    + Don't use `abs()`. Use the flow from problem 1 and multiply by negative one as necessary. 
    
 ```{r}
-
+Value_Absolute<- function(Input){
+    if (Input > 0)
+    print(Input)
+  else
+    print(Input*-1)
+}
 
 ```
 
@@ -48,7 +68,16 @@ The questions from your notes today are below, please copy your answers them her
    + There are functions that check and return T/F: `is.numeric()` or `is.character()` would be relevant here
    
 ```{r}
+Value_Absolute<- function(Input){
+    if(is.character(Input))
+    print('Please pass a numerical value to this function')
+  else if (Input > 0)
+    print(Input)
+  else
+    print(Input*-1)
 
+
+}
 
 
 ```
